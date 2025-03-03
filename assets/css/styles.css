@@ -97,6 +97,29 @@ a {
   cursor: pointer;
 }
 
+iframe {
+  border: none;
+  width: 100%;
+  min-height: 100vh;
+}
+
+.c-section {
+  position: relative;
+  overflow: hidden;
+}
+
+.c-container {
+  max-width: 1170px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.c-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
 .c-header {
   z-index: var(--z-fixed);
   position: fixed;
@@ -111,12 +134,6 @@ a {
   display: flex;
   align-items: center;
   justify-content: space-between;
-}
-
-.c-container {
-  max-width: 1170px;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 .c-logo a {
@@ -161,6 +178,14 @@ a {
 
 .border-btn {
   border: 2px solid var(--color-01);
+}
+
+.fill-btn {
+  background: var(--primary-color);
+  border: 2px solid var(--primary-color);
+}
+.fill-btn a {
+  color: var(--dark-color);
 }
 
 .lets-talk-icon {
@@ -358,4 +383,129 @@ a {
   100% {
     transform: rotateZ(0);
   }
+}
+
+/* Home */
+.home-container {
+  height: 100vh;
+}
+.home-container .c-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.home-social {
+  position: absolute;
+  left: 0;
+}
+.home-social span {
+  position: absolute;
+  left: 10px;
+  color: var(--color-01);
+  font-size: var(--tiny-fs);
+  white-space: nowrap;
+  transform: rotateZ(-90deg);
+  transform-origin: left;
+}
+.home-social .social-line {
+  background: var(--color-01);
+  width: 1px;
+  height: 100px;
+  margin-top: 37px;
+  margin-bottom: 25px;
+  margin-left: 10px;
+}
+.home-social .social-icons {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+.home-social .social-icons li a {
+  color: var(--color-01);
+  font-size: var(--xlarge-fs);
+  transition: 0.3s;
+}
+.home-social .social-icons li a:hover {
+  color: var(--hover-color);
+}
+
+.avatar-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 25px;
+}
+.avatar-container .hire-btn-01 {
+  display: none;
+}
+.avatar-info {
+  position: relative;
+}
+.avatar-info .text-content {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+}
+.avatar-info .hello-text {
+  font-size: var(--base-fs);
+  font-weight: var(--font-semibold);
+}
+.avatar-info .my-name{
+    color: var(--color-02);
+    font-size: var(--h1-fs);
+    font-weight: var(--font-bold);
+}
+.avatar-info .what-i-do{
+    font-size: var(--base-fs);
+    font-weight: var(--font-semibold);
+    margin-bottom: 35px;
+}
+
+.avatar-img {
+  position: relative;
+  width: 425px;
+  height: 425px;
+}
+.avatar-img img {
+  position: absolute;
+  width: 100%;
+}
+
+.home-scroll-btn{
+    position: absolute;
+    right: -5px;
+    color: var(--color-01);
+    display: grid;
+    justify-items: center;
+    row-gap: 3px;
+    animation: up-down 1.5s linear infinite;
+    animation-delay: 1.85s;
+}
+.home-scroll-btn:hover{
+    color: var(--hover-color);
+}
+.home-scroll-btn div{
+    font-size: var(--tiny-font-sie);
+    font-weight: var(--font-regular);
+    writing-mode: vertical-lr;
+    text-orientation: mixed;
+    white-space: nowrap;
+    transform: rotate(180deg);
+    margin-top: 7px;
+}
+.home-scroll-btn i{
+    font-size: 2rem;
+}
+@keyframes up-down {
+    0%{
+        transform: translateY(8px);
+    }
+    50%{
+        transform: translateY(-8px);
+    }
+    100%{
+        transform: translateY(8px);
+    }
 }
