@@ -1,0 +1,199 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+:root {
+  --hue: 217;
+  --sat: 85%;
+  --light: 74%;
+
+  --primary-color: hsl(var(--hue) var(--sat) var(--light));
+  --white-color: hsl(var(--hue) 45% 98%);
+  --dark-color: hsl(var(--hue) 26% 12%);
+
+  --color-01: var(--primary-color); /* Primary to dark */
+  --color-02: var(--white-color); /* White to dark */
+  --color-03: var(--dark-color); /* Dark to white */
+  --color-04: hsl(var(--hue) 0% 62%); /* Light-gray to dark-gray */
+  --color-05: var(--dark-color); /* Dark to primary */
+
+  --body-color: hsl(250 26% 12%);
+  --hover-color: hsl(var(--hue) var(--sat) calc(var(--light) - 7%));
+
+  --bottom-nav-bg: hsl(var(--hue) 32% 25% / 0.65);
+  --card-bg: linear-gradient(
+    120deg,
+    hsl(var(--hue) 54% 74% / 0.15),
+    hsl(var(--hue) 54% 74% / 0.05)
+  );
+  --modal-backdrop-bg: hsl(var(--hue) 54% 74% / 0.1);
+  --footer-bg: linear-gradient(
+    360deg,
+    hsl(var(--hue) 54% 74% / 0.15),
+    hsl(var(--hue) 54% 74% / 0.1)
+  );
+
+  --scrollbar-color: hsl(var(--hue) 25% 20%);
+  --scrollbar-thumb: var(--primary-color);
+  --scrollbar-thumb-hover: var(--hover-color);
+
+  --body-font-family: "Poppins", serif;
+
+  --h1-fs: 2.85rem;
+  --h2-fs: 2.25rem;
+  --h3-fs: 1.97rem;
+  --h4-fs: 1.43rem;
+  --h5-fs: 1.13rem;
+
+  --xlarge-fs: 1.48rem;
+  --large-fs: 1.23rem;
+  --medium-fs: 1.18rem;
+  --base-fs: 1.1rem;
+  --small-fs: 1.07rem;
+  --tiny-fs: 0.98rem;
+
+  --font-light: 300;
+  --font-regular: 400;
+  --font-medium: 500;
+  --font-semibold: 600;
+  --font-bold: 700;
+
+  /* z index */
+  --z-minus: -1;
+  --z-base: 0;
+  --z-low: 1;
+  --z-high: 10;
+  --z-content: 100;
+  --z-tooltip: 1000;
+  --z-fixed: 1100;
+  --z-overlay: 1110;
+  --z-modal: 1990;
+  --z-max: 9999;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: var(--body-font-family);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  color: var(--color-04);
+  background: var(--body-color);
+  transition: 0.3s;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+a {
+  color: var(--color-04);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.c-header {
+  z-index: var(--z-fixed);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  padding: 30px 0;
+  transition: 0.3s ease;
+}
+.c-header .inner {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.c-container {
+  max-width: 1170px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.c-logo a {
+  color: var(--color-01);
+  font-size: 2.6rem;
+  font-weight: var(--font-semibold);
+  letter-spacing: -3px;
+  transition: 0.3s;
+}
+.c-logo a:hover {
+  color: var(--hover-color);
+}
+
+.header-btns {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 25px;
+}
+
+.c-main-btn {
+  width: fit-content;
+  padding: 14px 30px;
+  border-radius: 35px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.c-main-btn:hover {
+  color: var(--white-color);
+  background: var(--hover-color);
+  border: 2px solid var(--hover-color);
+}
+.c-main-btn a {
+  color: var(--color-01);
+  font-size: var(--small-fs);
+  font-weight: 500;
+  transition: 0.3s;
+}
+.c-main-btn:hover a {
+  color: var(--white-color);
+}
+
+.border-btn {
+  border: 2px solid var(--color-01);
+}
+
+.lets-talk-icon {
+  color: var(--color-01);
+  font-size: 1.8rem;
+  cursor: pointer;
+  transition: 0.3s;
+  display: none;
+}
+.lets-talk-icon:hover {
+  color: var(--hover-color);
+}
+
+.theme-btn {
+  position: relative;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  width: 27px;
+  cursor: pointer;
+}
+.theme-btn i{
+  position: absolute;
+  color: var(--color-01);
+  font-size: 1.7rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.theme-btn:hover i {
+    color: var(--hover-color);
+    transform: rotate(-15deg);
+}
+
+.theme-btn .moon-icon{
+    display: none;
+}
