@@ -69,19 +69,7 @@
   --z-max: 9999;
 }
 
-
 /* ======================================== */
-
-/* .lets-talk-icon {
-  color: var(--color-01);
-  font-size: 1.8rem;
-  cursor: pointer;
-  transition: 0.3s;
-  display: none;
-}
-.lets-talk-icon:hover {
-  color: var(--hover-color);
-} */
 
 .theme-btn {
   position: relative;
@@ -118,7 +106,16 @@
   position: fixed;
   left: 50%;
   transform: translateX(-50%);
+  bottom: -75px;
+  opacity: 0;
+  transition: 0.5s ease, 0.3s ease;
+  transition-property: bottom, opacity;
+}
+.bottom-nav.active {
   bottom: 50px;
+  opacity: 1;
+  transition: 0.5s ease, 0.3s ease;
+  transition-property: bottom, opacity;
 }
 .bottom-nav .menu {
   background: var(--bottom-nav-bg);
@@ -197,9 +194,14 @@
   pointer-events: none;
   opacity: 0;
 }
+.menu-hide-btn.active {
+  pointer-events: all;
+  opacity: 1;
+}
 .bottom-nav .menu-hide-btn:hover {
-  /* color: var(--white-color); */
-  color: var(--hover-color);
+  color: var(--white-color);
+  /* color: var(--hover-color); */
+  background: var(--hover-color);
 }
 
 .bottom-nav-inner {
@@ -211,8 +213,10 @@
   position: fixed;
   background: var(--bottom-nav-bg);
   backdrop-filter: blur(10px);
-  width: 85px;
+  /* width: 85px; */
+  width: 50px;
   height: 50px;
+  border-radius: 50%;
   border-bottom: 1px solid hsl(var(--hue) 45% 98%/ 0.1);
   border-left: 1px solid hsl(var(--hue) 45% 98%/ 0.1);
   display: flex;
@@ -222,14 +226,27 @@
   row-gap: 5px;
   translate: -50% 0;
   left: 50%;
-  /* bottom: 50px; */
   bottom: -75px;
   opacity: 0;
-  border-radius: 5px;
+  /* border-radius: 5px; */
   cursor: pointer;
+  transition: 0.5s ease, 0.3s ease;
+  transition-property: bottom, opacity;
   overflow: hidden;
   animation: wiggle 2s linear infinite;
   animation-delay: 1s;
+}
+.menu-show-btn i {
+  color: var(--primary-color);
+}
+.menu-show-btn i {
+  color: var(--hover-color);
+}
+.menu-show-btn.active {
+  bottom: 50px;
+  opacity: 1;
+  transition: 0.5s ease, 0.3s ease;
+  transition-property: bottom, opacity;
 }
 .menu-show-btn .bar-01,
 .menu-show-btn .bar-02 {
@@ -892,7 +909,7 @@
   resize: none;
 }
 
-.contact-form form .send-message{
+.contact-form form .send-message {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -904,18 +921,18 @@
   width: 200px;
   padding: 16px 30px;
   margin-top: 10px;
-  transition: .3s;
+  transition: 0.3s;
 }
 
-.contact-form-alert{
+.contact-form-alert {
   cursor: pointer;
 }
-.contact-form-alert span{
+.contact-form-alert span {
   color: var(--color-02);
   font-size: var(--tiny-fs);
   font-weight: var(--font-regular);
 }
-.contact-form-alert i{
+.contact-form-alert i {
   color: var(--primary-color);
   font-size: 1.25rem;
   padding-left: 5px;
