@@ -5,9 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio</title>
     <link rel="stylesheet" href="/assets/css/styles.css" />
+    <link rel="stylesheet" href="/assets/css/components.css" />
     <script src="/assets/js/resume.js" defer></script>
     <script src="/assets/js/works.js" defer></script>
     <script src="/assets/js/contact.js" defer></script>
+    <script src="/assets/js/main.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <link rel="icon" href="/assets/images/logo.png" type="image/icon type" />
     <script
@@ -19,7 +21,7 @@
       rel="stylesheet"
     />
   </head>
-<!-- Nguyen Thi Yen Chi -->
+  <!-- Nguyen Thi Yen Chi -->
   <body>
     <div id="header-container"></div>
     <div id="bottom-nav-container"></div>
@@ -29,6 +31,8 @@
     <div id="works-container"></div>
     <div id="contact-container"></div>
     <div id="footer-container"></div>
+
+    <!-- Load container to the main page 🥲 -->
     <script>
       function loadHTML(id, file, callback) {
         fetch(file)

@@ -1,7 +1,7 @@
 function initWorks() {
   const tabs = document.querySelector(".work-tabs");
   if (!tabs) return; // Exit if work tabs are not available
-  
+
   const btns = tabs.querySelectorAll(".tab-btn");
   const cardsWithModals = document.querySelectorAll(
     ".work-container .card-with-modal"
